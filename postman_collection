@@ -1,0 +1,291 @@
+{
+	"id": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+	"name": "node_chat_sessions",
+	"description": "",
+	"order": [
+		"7467fd2d-7d19-3782-ffb1-033d90d2aab9",
+		"2d6846c5-5c9b-63dd-65e0-6813c571e549",
+		"db46beed-6527-e9c0-83e7-151389129168",
+		"d0ea744e-c337-2d3a-a758-b5739a088b03",
+		"a090940c-e9ed-97e9-c444-fca00e2ebd0f",
+		"09df6d88-ead7-6fcc-f0cd-b656d5575666",
+		"1bead871-e987-96f7-7bfc-9a0ef85ad0be",
+		"dc70a03f-2301-ec6e-56ee-5693b2e433df",
+		"15eb303e-62d7-6fe5-a49f-af17313a81d0"
+	],
+	"folders": [],
+	"timestamp": 1498058246677,
+	"owner": "851632",
+	"public": false,
+	"requests": [
+		{
+			"id": "09df6d88-ead7-6fcc-f0cd-b656d5575666",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/api/messages?id=0",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1498058324450,
+			"version": 2,
+			"responses": [],
+			"tests": "const res = JSON.parse( responseBody );\nconst isArray = ( Array.isArray( res ) );\nconst updated = ( res[0].text === \"Updated\" );\n\ntests[\"API can update messages\"] = isArray && updated;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"text\": \"Updated\"\n}"
+		},
+		{
+			"id": "15eb303e-62d7-6fe5-a49f-af17313a81d0",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/api/messages?id=2",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "2",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498058428039,
+			"name": "http://localhost:3000/api/messages copy copy copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": []
+		},
+		{
+			"id": "1bead871-e987-96f7-7bfc-9a0ef85ad0be",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/api/messages?id=0",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498058410603,
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": []
+		},
+		{
+			"id": "2d6846c5-5c9b-63dd-65e0-6813c571e549",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/api/messages",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497625143450,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "5788c25a-2d03-8cb2-e807-fdd129654d49",
+			"rawModeData": "{\n\t\"text\": \"Text 1\",\n\t\"time\": \"Time 1\"\n}"
+		},
+		{
+			"id": "7467fd2d-7d19-3782-ffb1-033d90d2aab9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/api/messages",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "const res = JSON.parse( responseBody );\nconst resLength = ( res.length === 1 );\nconst resText = ( res[0].text === \"Text 0\");\nconst resTime = ( res[0].time === \"Time 0\");\n\ntests['API can create messages.'] = resLength && resText && resTime;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497625363853,
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "13e50c60-ec88-4492-e907-6f4f03ca94a0",
+			"rawModeData": "{\n\t\"text\": \"Text 0\",\n\t\"time\": \"Time 0\"\n}"
+		},
+		{
+			"id": "a090940c-e9ed-97e9-c444-fca00e2ebd0f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/api/messages/history",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "const res = JSON.parse( responseBody );\nconst isArray = ( Array.isArray( res ) );\nconst resLength = ( res.length === 3 );\n\ntests[\"API can fetch history.\"] = isArray && resLength;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498058468265,
+			"name": "http://localhost:3000/api/messages copy copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": []
+		},
+		{
+			"id": "d0ea744e-c337-2d3a-a758-b5739a088b03",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/api/messages",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "const res = JSON.parse( responseBody );\nconst isArray = ( Array.isArray( res ) );\nconst resLength = ( res.length === 3 );\n\ntests[\"API can fetch messages.\"] = isArray && resLength;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497625504633,
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "29f809af-0254-71a4-e7f3-530bc4637d19"
+		},
+		{
+			"id": "db46beed-6527-e9c0-83e7-151389129168",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/api/messages",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "const res = JSON.parse( responseBody );\nconst resLength = ( res.length === 3 );\n\nconst resText = ( res[2].text === \"Text 2\");\nconst resTime = ( res[2].time === \"Time 2\");\n\ntests['API can create messages.'] = resLength && resText && resTime;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497625390180,
+			"name": "http://localhost:3000/api/messages copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "0cddce13-5420-013e-bcc5-bb788ab7248f",
+			"rawModeData": "{\n\t\"text\": \"Text 2\",\n\t\"time\": \"Time 2\"\n}"
+		},
+		{
+			"id": "dc70a03f-2301-ec6e-56ee-5693b2e433df",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/api/messages?id=1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498058421244,
+			"name": "http://localhost:3000/api/messages copy copy",
+			"description": "",
+			"collectionId": "39e80e64-0cfd-817c-2d11-8faac8191b98",
+			"responses": []
+		}
+	]
+}
