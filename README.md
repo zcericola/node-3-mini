@@ -384,7 +384,7 @@ In this step, we'll use the `front-end` to see if the `history` endpoint is work
 
 ### Solution
 
-<b> insert giphy here </b>
+<img src="https://github.com/DevMountain/node-chat-sessions/blob/solution/readme-assets/1g.gif" />
 
 ## Contributions
 
