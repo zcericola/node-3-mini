@@ -189,7 +189,7 @@ module.exports = function( req, res, next ) {
 
 ### Summary
 
-In this step, we'll require `server/middlewares/filter.js` in `server/index.js` and check if the method of the request is `POST` or `PUT`. If it is `POST` or `PUT` we'll call our `filter` middleware to `filter` the `text` from the `request` body.
+In this step, we'll require `server/middlewares/filter.js` in `server/index.js` and check if the method of the request is `POST` or `PUT`. If it is `POST` or `PUT`, we'll call our `filter` middleware to `filter` the `text` from the `request` body.
 
 ### Instructions
 
