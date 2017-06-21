@@ -95,7 +95,7 @@ export default class ChatWindow extends Component {
             <HistoryIcon onClick={ this.getHistory } />
           </div>
         </div>
-        <History style={ { opacity: this.state.showHistory ? '1' : '0' } } history={ this.state.history } />
+        <History style={ { display: this.state.showHistory ? 'inline' : 'none' } } history={ this.state.history } />
       </div>
     )
   }
