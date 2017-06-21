@@ -189,14 +189,14 @@ module.exports = function( req, res, next ) {
 
 ### Summary
 
-In this step, we'll require `server/middlewares/filter.js` in `server/index.js` and check if the method of the request is `POST`. If it is `POST` we'll call our `filter` middleware to `filter` the `text` from the `request` body.
+In this step, we'll require `server/middlewares/filter.js` in `server/index.js` and check if the method of the request is `POST` or `PUT`. If it is `POST` or `PUT` we'll call our `filter` middleware to `filter` the `text` from the `request` body.
 
 ### Instructions
 
 * Open `server/index.js`.
 * Require `server/middlewares/filter.js` in a variable called `filter`.
 * Add middleware to app that captures `req`, `res`, and `next`.
-* Check if the method of the request is `POST`. If it is `POST`, call `filter` with `req`, `res`, and `next` as arguments. Otherwise just invoke `next`.
+* Check if the method of the request is `POST` or `PUT`. If it is `POST` or `PUT`, call `filter` with `req`, `res`, and `next` as arguments. Otherwise just invoke `next`.
   * The method of a request is defined on `req.method`.
 
 ### Solution
@@ -228,7 +228,7 @@ app.use( session({
 app.use( ( req, res, next ) => createInitialSession( req, res, next ) );
 app.use( ( req, res, next ) => {
   const { method } = req;
-  if ( method === "POST" ) {
+  if ( method === "POST" || method === "PUT" ) {
     filter( req, res, next );
   } else {
     next();
@@ -347,7 +347,7 @@ app.use( session({
 app.use( ( req, res, next ) => createInitialSession( req, res, next ) );
 app.use( ( req, res, next ) => {
   const { method } = req;
-  if ( method === "POST" ) {
+  if ( method === "POST" || method === "PUT" ) {
     filter( req, res, next );
   } else {
     next();
