@@ -4,7 +4,7 @@
 
 In this project, we will take the afternoon project of the first day of Node and modify it to use `sessions`, custom `middleware`, and also use `query parameters`. We'll build a filter middleware that will censor words before being pushed to the `messages` array. We'll also modify the `update` and `delete` endpoints to use `query parameters` instead of URL parameters. Lastly, we'll use `sessions` to keep track of messages sent by a user during a session and build out an endpoint that will display the history of messages.
 
-<b> insert image here </b>
+<img src="https://github.com/DevMountain/node-chat-sessions/blob/solution/readme-assets/1.png" />
 
 ## Setup
 
