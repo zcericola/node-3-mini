@@ -20,7 +20,7 @@ app.use( session({
 app.use( ( req, res, next ) => createInitialSession( req, res, next ) );
 app.use( ( req, res, next ) => {
   const { method } = req;
-  if ( method === "POST" ) {
+  if ( method === "POST" || method === "PUT" ) {
     filter( req, res, next );
   } else {
     next();

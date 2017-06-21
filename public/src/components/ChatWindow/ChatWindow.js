@@ -50,23 +50,20 @@ export default class ChatWindow extends Component {
   }
 
   editMessage( id, text ) {
-    console.log( 'editMessage:', id, text ); 
-    axios.put( url + `/${id}`, { text } ).then( response => {
+    axios.put( `${url}?id=${id}`, { text } ).then( response => {
       this.setState({ messages: response.data });
     });
   }
 
   removeMessage( id ) {
-    axios.delete( url + `/${id}` ).then( response => {
+    axios.delete( `${url}?id=${id}` ).then( response => {
       this.setState({ messages: response.data });
     });
   }
 
   getHistory() {
-    console.log('getHistory called');
     const { showHistory } = this.state;
     if ( !showHistory ) {
-      console.log('fetching history');
       this.setState({ showHistory: true });
       axios.get( `${url}/history` ).then( response => {
         this.setState({ history: response.data });
