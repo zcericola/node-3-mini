@@ -16,7 +16,7 @@ In this project, we will take the afternoon project of the first day of Node and
 
 ### Summary
 
-In this step, we'll use `npm` to install `express-session`, require it in our `server/index.js`, and configure our app to use `sessions`.
+In this step, we'll use `npm` to install `express-session` and `dotenv`, require them in our `server/index.js`, and configure our app to use `sessions`.
 
 ### Instructions
 
@@ -25,6 +25,7 @@ In this step, we'll use `npm` to install `express-session`, require it in our `s
 * Configure the app to use sessions using `app.use`.
   * The first parameter should be `session` invoked with an object as its first argument.
   * In the object define the value for `secret`, `resave`, `saveUninitialized`, and `cookie.maxAge`.
+    * Don't forget to configure `dotenv` to use with your session secret and include your `.env` file in your `.gitignore`.
 
 ### Solution
 
@@ -37,13 +38,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mc = require( `${__dirname}/controllers/messages_controller` );
+require('dotenv').config()
 
 const app = express();
 
 app.use( bodyParser.json() );
 app.use( express.static( `${__dirname}/../public/build` ) );
 app.use( session({
-  secret: '@nyth!ng y0u w@nT',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 10000 }
@@ -55,7 +57,7 @@ app.get( messagesBaseUrl, mc.read );
 app.put( `${messagesBaseUrl}`, mc.update );
 app.delete( `${messagesBaseUrl}`, mc.delete );
 
-const port = 3000;
+const port = process.env.PORT || 3000
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
 ```
 
@@ -109,6 +111,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mc = require( `${__dirname}/controllers/messages_controller` );
+require('dotenv').config()
 
 const createInitialSession = require( `${__dirname}/middlewares/session.js` );
 
@@ -117,7 +120,7 @@ const app = express();
 app.use( bodyParser.json() );
 app.use( express.static( `${__dirname}/../public/build` ) );
 app.use( session({
-  secret: '@nyth!ng y0u w@nT',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 10000 }
@@ -131,7 +134,7 @@ app.get( messagesBaseUrl, mc.read );
 app.put( `${messagesBaseUrl}`, mc.update );
 app.delete( `${messagesBaseUrl}`, mc.delete );
 
-const port = 3000;
+const port = process.env.PORT || 3000
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
 ```
 
@@ -210,6 +213,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mc = require( `${__dirname}/controllers/messages_controller` );
+require('dotenv').config()
 
 const createInitialSession = require( `${__dirname}/middlewares/session.js` );
 const filter = require( `${__dirname}/middlewares/filter.js`);
@@ -219,7 +223,7 @@ const app = express();
 app.use( bodyParser.json() );
 app.use( express.static( `${__dirname}/../public/build` ) );
 app.use( session({
-  secret: '@nyth!ng y0u w@nT',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 10000 }
@@ -241,7 +245,7 @@ app.get( messagesBaseUrl, mc.read );
 app.put( `${messagesBaseUrl}`, mc.update );
 app.delete( `${messagesBaseUrl}`, mc.delete );
 
-const port = 3000;
+const port = process.env.PORT || 3000
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
 ```
 
@@ -329,6 +333,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mc = require( `${__dirname}/controllers/messages_controller` );
+require('dotenv').config()
 
 const createInitialSession = require( `${__dirname}/middlewares/session.js` );
 const filter = require( `${__dirname}/middlewares/filter.js`);
@@ -338,7 +343,7 @@ const app = express();
 app.use( bodyParser.json() );
 app.use( express.static( `${__dirname}/../public/build` ) );
 app.use( session({
-  secret: '@nyth!ng y0u w@nT',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 10000 }
@@ -361,7 +366,7 @@ app.put( `${messagesBaseUrl}`, mc.update );
 app.delete( `${messagesBaseUrl}`, mc.delete );
 app.get( `${messagesBaseUrl}/history`, mc.history );
 
-const port = 3000;
+const port = process.env.PORT || 3000
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
 ```
 
