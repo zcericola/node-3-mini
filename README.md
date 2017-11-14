@@ -150,7 +150,7 @@ In this step, we will create a filter middleware file that will handle filtering
 
 * Create a file called `filter.js` in `server/middlewares/`.
 * Open `server/middlewares/filter.js`.
-* At the very top of the file create an array of words that should be censored.
+* At the very top of the file create an array called `notAllowed` that contains words that should be censored.
 * Use `module.exports` to export a function that has a `req`, `res`, and `next` parameter.
 * Copy in the following filter code:
   * <details>
