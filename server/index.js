@@ -10,7 +10,7 @@ const filter = require( `${__dirname}/middlewares/filter.js`);
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 app.use( session({
   secret: 'process.env.SESSION_SECRET',
   resave: false,
