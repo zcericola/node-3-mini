@@ -43,7 +43,7 @@ require('dotenv').config()
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}../build` ) );
 app.use( session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -118,7 +118,7 @@ const createInitialSession = require( `${__dirname}/middlewares/session.js` );
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}../build` ) );
 app.use( session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -221,7 +221,7 @@ const filter = require( `${__dirname}/middlewares/filter.js`);
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}../build` ) );
 app.use( session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -341,7 +341,7 @@ const filter = require( `${__dirname}/middlewares/filter.js`);
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}../build` ) );
 app.use( session({
   secret: process.env.SESSION_SECRET,
   resave: false,

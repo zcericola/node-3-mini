@@ -5,7 +5,7 @@ const mc = require( `./controllers/messages_controller` );
 const app = express();
 
 app.use( bodyParser.json() );
-app.use( express.static( `${__dirname}/build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 
 const messagesBaseUrl = "/api/messages";
 app.post( messagesBaseUrl, mc.create );
