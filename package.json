@@ -10,21 +10,9 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3000/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devlemire/node-chat.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/devlemire/node-chat/issues"
-  },
-  "homepage": "https://github.com/devlemire/node-chat#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "express-session": "^1.15.3",
     "axios": "^0.16.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
