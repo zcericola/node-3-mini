@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mc = require( './controllers/messages_controller' );
-require('dotenv').config()
+const Path = require('path');
+// require('dotenv').config()
 
 const createInitialSession = require( `${__dirname}/middlewares/session.js` );
 const filter = require( `${__dirname}/middlewares/filter.js`);
@@ -35,5 +36,10 @@ app.put( `${messagesBaseUrl}`, mc.update );
 app.delete( `${messagesBaseUrl}`, mc.delete );
 app.get( `${messagesBaseUrl}/history`, mc.history );
 
-const port = process.env.PORT || 3000;
+app.use( express.static( __dirname + '/public/build/') );
+app.get( '*', ( req, res, next ) => {
+  res.sendFile( Path.resolve( __dirname + '/public/build/index.html' ) );
+});
+
+const port = 10008;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );

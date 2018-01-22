@@ -3,34 +3,11 @@
   "version": "1.0.0",
   "description": "Node 3 - Mini",
   "main": "index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "proxy": "http://localhost:3000/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devlemire/node-chat.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/devlemire/node-chat/issues"
-  },
-  "homepage": "https://github.com/devlemire/node-chat#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
-    "axios": "^0.16.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-icons": "^2.2.5"
-  },
-  "devDependencies": {
-    "react-scripts": "1.0.7"
+    "path": "^0.12.7"
   }
 }
